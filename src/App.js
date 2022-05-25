@@ -13,6 +13,7 @@ import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import Review from './Pages/Dashboard/Review';
 import Error from './Pages/Error/Error';
+import Profile from './Pages/Dashboard/Profile';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/dashboard' element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<Review></Review>}></Route>
+          <Route path='profile' element={<Profile></Profile>}></Route>
         </Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
