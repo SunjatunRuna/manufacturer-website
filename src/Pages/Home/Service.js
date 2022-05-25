@@ -13,13 +13,13 @@ const Service = ({ service }) => {
         <figure class="px-10 pt-10">
           <img src={img} alt="Shoes" class="rounded-xl object-cover h-36 w-96" />
         </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">{name}</h2>
-          <small>Quantity: {quantity}</small>
+        <div class="card-body">
+          <h2 class="card-title text-primary">{name}</h2>
+          <small className='text-yellow-600'>Quantity: {quantity}</small>
           <small>Minimum Order: {minimum}</small>
-          <p>Price: {price}</p>
-          <div class="card-actions">
-            <button onClick={() => purchaseBtn(_id)} class="btn btn-primary">Buy Now</button>
+          <p>Price: {price}TK</p>
+          <div class="card-actions w-full">
+            <button onClick={() => purchaseBtn(_id)} class="btn btn-primary w-full">Buy Now</button>
           </div>
         </div>
       </div>

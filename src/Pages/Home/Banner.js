@@ -1,46 +1,14 @@
 import React from 'react';
-import img from '../../images/61yfiaWp1BS._AC_SL1500_-removebg-preview.png';
-import img3 from '../../images/Computer-1-removebg-preview.png'
+import img from '../../images/pexels-bich-tran-669996 (2).jpg';
 const Banner = () => {
     return (
-        <div class="carousel w-full">
-            <div id="slide1" class="carousel-item relative w-full flex justify-center items-center">
-                <div class="hero min-h-screen bg-gradient-to-r from-teal-100 to-accent-500">
-                    <div class="hero-content flex-col lg:flex-row-reverse mx-36">
-                        <img src={img} class="max-w-lg" />
-                        <div>
-                            <h1 class="text-5xl font-bold">Computer Parts</h1>
-                            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                            <button class="btn btn-outline btn-info text-white">Get Started</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle">❮</a>
-                    <a href="#slide2" class="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" class="carousel-item relative w-full">
-                <img src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a>
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide3" class="carousel-item relative w-full">
-            <div class="hero min-h-screen">
-                    <div class="hero-content flex-col lg:flex-row-reverse mx-36">
-                        <img src={img3} class="max-w-{500px}" />
-                        <div>
-                            <h1 class="text-5xl font-bold">Computer Parts</h1>
-                            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                            <button class="btn btn-primary">Get Started</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a>
-                    <a href="#slide1" class="btn btn-circle">❯</a>
+        <div class="hero min-h-screen" style={{backgroundImage: "url(https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2018/11/dark-wallpapers.jpg?q=50&fit=contain&w=767&h=384&dpr=1.5)"}}>
+            <div class="hero-overlay bg-opacity-30"></div>
+            <div class="hero-content text-center text-secondary">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <button class="btn btn-primary">Get Started</button>
                 </div>
             </div>
         </div>

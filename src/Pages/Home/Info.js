@@ -11,7 +11,7 @@ const Info = () => {
                     <h2 class="card-title">Location</h2>
                 </div>
             </div>
-            <div class="card bg-gradient-to-r from-teal-300 to-blue-300 shadow-xl text-white">
+            <div class="card bg-yellow-400 shadow-xl text-white">
                 <figure class="px-10 pt-10">
                 <i class="fa-solid fa-screwdriver-wrench text-5xl"></i>
                 </figure>

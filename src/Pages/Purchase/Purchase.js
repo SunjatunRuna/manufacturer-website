@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Modal from './Modal';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init'
 
 const Purchase = () => {
     const [data, setData] = useState({});
     const [quantity, setQuantity] = useState(0);
-    const { id } = useParams()
+    const [user, loading, error] = useAuthState(auth);
+    const { id } = useParams();
     useEffect(() => {
         const url = `http://localhost:5000/service/${id}`
         fetch(url)
@@ -17,20 +19,43 @@ const Purchase = () => {
         event.preventDefault();
         const phone = event.target.phone.value;
         console.log(phone);
-    }
-    const reduceBtn = () =>{
-        if(quantity > data.quantity){
-            setQuantity(quantity - 1);
+        const order = {
+            orderId: data._id,
+            order: data.name,
+            quantity: event.target.quantity.value,
+            buyer: user.email,
+            buyerName: user.displayName,
+            phone,
         }
+
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setData(null);
+                console.log(data);
+            })
     }
-    const increaseBtn = () =>{
-        if(quantity < data.minimum){
-            setQuantity(quantity + 1);
-        }
-    }
-    const quantityChange = e =>{
-        setQuantity(e.target.quantity.value);
-    }
+
+
+    // const reduceBtn = () =>{
+    //     if(quantity > data.quantity){
+    //         setQuantity(quantity - 1);
+    //     }
+    // }
+    // const increaseBtn = () =>{
+    //     if(quantity < data.minimum){
+    //         setQuantity(quantity + 1);
+    //     }
+    // }
+    // const quantityChange = e =>{
+    //     setQuantity(e.target.quantity.value);
+    // }
     return (
         <div className='grid grid-col-1 lg:grid-cols-2 px-32 my-12'>
             <div class="card mx-32">
@@ -42,18 +67,19 @@ const Purchase = () => {
                 </div>
             </div>
             <div className='mr-32'>
-            <form onSubmit={handleOrder} className='py-4 grid grid-cols-1 gap-4 justify-items-center'>
-                <input type="text" name='name' className="input input-bordered max-w-xs" />
-                <input type="email" name='email' className="input input-bordered max-w-xs" />
-                <div>
-                    <button onClick={reduceBtn} className='text-3xl mx-4 font-bold'>-</button>
-                    <input onChange={quantityChange} type="number" name="quantity" value={quantity} id="" className='border text-center py-2' />
-                    <button onClick={increaseBtn} className='text-3xl mx-4 font-bold'>+</button>
+                <div class="avatar">
+                    <div class="w-16 rounded-full">
+                        <img src={user.photoURL} />
+                    </div>
                 </div>
-                <input type="text" name='address' placeholder="Address" className="input input-bordered max-w-xs" />
-                <input type="number" name='phone' placeholder="Cell Phone" className="input input-bordered max-w-xs" />
-                <input type="submit" value='Place Order' className="btn btn-secondary text-white max-w-xs" />
-            </form>
+                <form onSubmit={handleOrder} className='py-4 grid grid-cols-1 gap-4 justify-items-center'>
+                    <input type="text" name='name' disabled value={user.displayName} className="input input-bordered max-w-xs" />
+                    <input type="email" name='email' disabled value={user.email} className="input input-bordered max-w-xs" />
+                    <input type="number" name='quantity' placeholder='Quantity' className="input input-bordered max-w-xs" />
+                    <input type="text" name='address' placeholder="Address" className="input input-bordered max-w-xs" />
+                    <input type="number" name='phone' placeholder="Cell Phone" className="input input-bordered max-w-xs" />
+                    <input type="submit" value='Place Order' className="btn btn-primary text-white max-w-xs" />
+                </form>
             </div>
         </div>
     );
