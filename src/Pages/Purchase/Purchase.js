@@ -37,8 +37,8 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(data => {
-                setData(null);
                 console.log(data);
+                event.target.reset();
             })
     }
 

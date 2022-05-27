@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import auth from '../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../Hooks/useToken';
 
 const Google = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [token] = useToken(user);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+    let from = location.state?.from?.pathname || "/";
+    useEffect( () =>{
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     let googleError;
     if(loading){
@@ -15,10 +22,6 @@ const Google = () => {
     }
     if(error){
         googleError = <p className='text-red-500'><small>{error?.message}</small></p>
-    }
-    if(user){
-        navigate(from, {replace: true});
-        console.log(user);
     }
     return (
         <div>

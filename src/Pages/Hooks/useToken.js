@@ -21,7 +21,7 @@ const useToken = user => {
                 setToken(accessToken);
             })
         }
-    }, [user])
+    }, [user]);
     return [token];
 }
 

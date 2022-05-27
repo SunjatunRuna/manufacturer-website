@@ -16,8 +16,8 @@ const Signup = () => {
       ] = useCreateUserWithEmailAndPassword(auth);
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
       const [token] = useToken(user);
-      let signInError;
       const navigate = useNavigate();
+      let signInError;
 
       if(loading || updating){
           return <p>Loading.....</p>
