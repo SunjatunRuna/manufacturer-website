@@ -11,13 +11,13 @@ const useToken = user => {
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify(currentUser)
+                body:JSON.stringify(currentUser)
             })
             .then(res => res.json())
             .then(data => {
                 console.log('data inside useToken', data);
                 const accessToken = data.token;
-                localStorage.setItem(accessToken);
+                localStorage.setItem('accessToken', accessToken);
                 setToken(accessToken);
             })
         }
