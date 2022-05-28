@@ -10,8 +10,19 @@ const MyOrder = () => {
     const navigate = useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?buyer=${user.email}`)
-                .then(res => res.json())
+            fetch(`http://localhost:5000/order?buyer=${user.email}`, {
+                method: 'GET',
+                headers:{
+                    authorization: `White ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => {
+                    console.log('res', res);
+                    if(res.status === 401 || res.status === 403){
+                        navigate('/home');
+                    }
+                    return res.json()
+                })
                 .then(data => setOrder(data))
         }
     }, [user])
