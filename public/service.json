@@ -1,7 +1,7 @@
 [
     {
         "name": "Motherboard",
-        "description": "",
+        "description":"High quality, cheap price",
         "quantity": "600",
         "minimum": "100",
         "price": "",
@@ -9,7 +9,7 @@
     },
     {
         "name": "RAM",
-        "description": "",
+        "description":"High quality, cheap price",
         "quantity": "850",
         "minimum": "100",
         "price": "3500",
@@ -17,7 +17,7 @@
     },
     {
         "name": "Cooling Fan",
-        "description": "",
+        "description":"High quality, cheap price",
         "quantity": "400",
         "minimum": "100",
         "price": "2000",
@@ -25,7 +25,7 @@
     },
     {
         "name": "ROM",
-        "description": "",
+        "description":"High quality, cheap price",
         "quantity": "1000",
         "minimum": "250",
         "price": "3000",
@@ -33,7 +33,7 @@
     },
     {
         "name": "Sound Card",
-        "description": "",
+        "description":"High quality, cheap price",
         "quantity": "950",
         "minimum": "200",
         "price": "2500",
@@ -41,7 +41,7 @@
     },
     {
         "name": "Graphics Card",
-        "description": "",
+        "description":"High quality, cheap price",
         "quantity": "1000",
         "minimum": "200",
         "price": "5000",

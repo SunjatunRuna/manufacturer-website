@@ -18,14 +18,19 @@ const Purchase = () => {
     const handleOrder = event => {
         event.preventDefault();
         const phone = event.target.phone.value;
+        const quantity = event.target.quantity.value;
+        const oldPrice = parseInt(data.price);
+        const price = oldPrice * parseInt(quantity); 
         console.log(phone);
         const order = {
             orderId: data._id,
             order: data.name,
-            quantity: event.target.quantity.value,
+            quantity,
             buyer: user.email,
             buyerName: user.displayName,
             phone,
+            price,
+            img: data.img
         }
 
         fetch('http://localhost:5000/order', {
@@ -59,11 +64,13 @@ const Purchase = () => {
     return (
         <div className='grid grid-col-1 lg:grid-cols-2 px-32 my-12'>
             <div class="card mx-32">
-                <figure><img src={data.img} alt="Shoes" /></figure>
+                <figure><img src={data.img} alt="Shoes" className='w-56' /></figure>
                 <div class="card-body">
                     <h2 class="card-title">{data.name}</h2>
                     <p>Description: {data.description}</p>
                     <p>Quantity: {data.quantity}</p>
+                    <p>Price: {data.price}</p>
+                    <p>Minimum Quantity: {data.minimum}</p>
                 </div>
             </div>
             <div className='mr-32'>
