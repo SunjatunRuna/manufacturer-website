@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useToken from '../Hooks/useToken';
 import Google from './Google';
+import img from '../../images/sign-account-user-authorization-login-authentication-page-concept-laptop-with-login-password-form-page-screen-stock-illustration_100456-1590.jpg'
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -38,13 +39,12 @@ const Login = () => {
         signInWithEmailAndPassword(data.email, data.password)
     }
     return (
-        <div class="hero min-h-screen">
-            <div class="hero-content flex-col lg:flex-row-reverse mx-32 px-32">
-                <div class="text-center lg:text-left">
-                    <h1 class="text-5xl font-bold">Login now!</h1>
-                    <p class="py-6 text-justify">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+        <div className="hero min-h-screen">
+            <div className="hero-content flex-col lg:flex-row-reverse mx-32 px-32">
+                <div className="text-center lg:text-left">
+                    <img src={img} alt="" />
                 </div>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body items-center">
                         <h2 className="card-title">Login</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>

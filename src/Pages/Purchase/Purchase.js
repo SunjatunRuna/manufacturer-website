@@ -9,7 +9,7 @@ const Purchase = () => {
     const [user, loading, error] = useAuthState(auth);
     const { id } = useParams();
     useEffect(() => {
-        const url = `http://localhost:5000/service/${id}`
+        const url = `https://evening-oasis-35651.herokuapp.com/service/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setData(data))
@@ -33,7 +33,7 @@ const Purchase = () => {
             img: data.img
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://evening-oasis-35651.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -63,10 +63,10 @@ const Purchase = () => {
     // }
     return (
         <div className='grid grid-col-1 lg:grid-cols-2 px-32 my-12'>
-            <div class="card mx-32">
+            <div className="card mx-32">
                 <figure><img src={data.img} alt="Shoes" className='w-56' /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">{data.name}</h2>
+                <div className="card-body">
+                    <h2 className="card-title">{data.name}</h2>
                     <p>Description: {data.description}</p>
                     <p>Quantity: {data.quantity}</p>
                     <p>Price: {data.price}</p>
@@ -74,8 +74,8 @@ const Purchase = () => {
                 </div>
             </div>
             <div className='mr-32'>
-                <div class="avatar">
-                    <div class="w-16 rounded-full">
+                <div className="avatar">
+                    <div className="w-16 rounded-full">
                         <img src={user.photoURL} />
                     </div>
                 </div>

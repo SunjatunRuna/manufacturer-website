@@ -10,7 +10,7 @@ const MyOrder = () => {
     const navigate = useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?buyer=${user.email}`, {
+            fetch(`https://evening-oasis-35651.herokuapp.com/order?buyer=${user.email}`, {
                 method: 'GET',
                 headers:{
                     authorization: `White ${localStorage.getItem('accessToken')}`
@@ -29,8 +29,8 @@ const MyOrder = () => {
     return (
         <div>
             My order: {order.length}
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     {/* <!-- head --> */}
                     <thead>
                         <tr>

@@ -6,7 +6,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, event) => {
         console.log(data);
-        const url = `http://localhost:5000/service`;
+        const url = `https://evening-oasis-35651.herokuapp.com/service`;
         fetch(url, {
             method: 'POST',
             headers: {

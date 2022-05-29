@@ -6,9 +6,9 @@ const Error = () => {
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2'>
             <div className='text-center mt-32'>
-                <div class="avatar placeholder">
-                    <div class="bg-primary text-secondary rounded-full w-56">
-                        <span class="text-6xl font-bold">404</span>
+                <div className="avatar placeholder">
+                    <div className="bg-primary text-secondary rounded-full w-56">
+                        <span className="text-6xl font-bold">404</span>
                     </div>
                 </div>
                 <br />

@@ -10,9 +10,15 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Manufacturing Website
+- Used font awesome icon
+- firebase authentication
+- email verification authentication hooks
+- useAuthState, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword authentication hooks, useSendPasswordReset authentication hooks, use toast for password reset
+- host client side website firebase
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Uses:
+- Tailwind Daisy UI, React Hook Form, React firebase Hook
 
 ### `npm test`
 

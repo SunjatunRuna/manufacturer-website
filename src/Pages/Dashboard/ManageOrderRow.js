@@ -9,15 +9,15 @@ const ManageOrderRow = ({ s, index, refetch, setDeleteItem }) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            <td><div class="avatar">
-                <div class="w-16 rounded">
+            <td><div className="avatar">
+                <div className="w-16 rounded">
                     <img src={img} alt="Tailwind-CSS-Avatar-component" />
                 </div>
             </div></td>
             <td>{name}</td>
             <td>{quantity}</td>
             <td>
-                <label onClick={() => setDeleteItem(s)} for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+                <label onClick={() => setDeleteItem(s)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
                 </td>
         </tr>
     );

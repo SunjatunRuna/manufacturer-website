@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import UserRow from './UserRow';
 
 const Users = () => {
-    const { data: user, isLoading, refetch } = useQuery('user', () => fetch('http://localhost:5000/user', {
+    const { data: user, isLoading, refetch } = useQuery('user', () => fetch('https://evening-oasis-35651.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `White ${localStorage.getItem('accessToken')}`
@@ -16,8 +16,8 @@ const Users = () => {
     return (
         <div>
             <h3 className='text-center text-xl uppercase mt-12'>All User: {user.length} </h3>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>

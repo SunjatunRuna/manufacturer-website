@@ -5,7 +5,7 @@ import ManageOrderRow from './ManageOrderRow';
 
 const ManageOrder = () => {
     const [ deleteItem, setDeleteItem ] = useState(null);
-    const { data: service, isLoading, refetch } = useQuery('service', () => fetch('http://localhost:5000/service')
+    const { data: service, isLoading, refetch } = useQuery('service', () => fetch('https://evening-oasis-35651.herokuapp.com/service')
         .then(res => res.json()))
     if (isLoading) {
         return <p>Loading.........</p>
@@ -13,8 +13,8 @@ const ManageOrder = () => {
     return (
         <div className='my-12'>
             <h3 className='text-xl text-center font-bold mb-8'>Manage Order: {service.length}</h3>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>

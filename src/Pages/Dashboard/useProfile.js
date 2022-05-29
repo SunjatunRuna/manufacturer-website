@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const useProfile = () => {
     const [data, setData] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5000/profile')
+        fetch('https://evening-oasis-35651.herokuapp.com/profile')
         .then(res => res.json())
         .then(data => setData(data))
     },[])

@@ -8,7 +8,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L4lNQLBEP4niCuyp5js0EVHVu1fbUdCPngcENiWpsM8MDje5EQyeykdHNNLQC5ehAr409RM4lT2yGi0PBH8vgUy00MtB6wjO3');
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://evening-oasis-35651.herokuapp.com/order/${id}`;
 
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
@@ -22,10 +22,10 @@ const Payment = () => {
     return (
         <div>
             <h3 className='text-xl font-bold my-8'>Order: #{order.orderId}</h3>
-            <div class="card w-96 lg:card-side bg-base-100 shadow-xl">
+            <div className="card w-96 lg:card-side bg-base-100 shadow-xl">
                 <figure><img src={order.img} alt="" className='w-36' /></figure>
-                <div class="card-body">
-                    <h2 class="card-title uppercase">Order by {order.buyerName}</h2>
+                <div className="card-body">
+                    <h2 className="card-title uppercase">Order by {order.buyerName}</h2>
                     <p>Pay for {order.order}</p>
                     <ul>
                         <li>Order Quantity: {order.quantity}</li>
@@ -34,7 +34,7 @@ const Payment = () => {
                 </div>
             </div>
             <div className='card w-96 p-4 lg:card-side shadow-xl'>
-            <div class="card-body">
+            <div className="card-body">
                 <Elements stripe={stripePromise}>
                     <CheckoutForm />
                 </Elements>

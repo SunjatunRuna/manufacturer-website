@@ -16,7 +16,7 @@ const Profile = () => {
             linkedin: data.linkedin
         }
         console.log(data);
-        const url = `http://localhost:5000/profile`;
+        const url = `https://evening-oasis-35651.herokuapp.com/profile`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -51,15 +51,15 @@ const Profile = () => {
                     <input className='py-2 bg-primary text-white rounded' type="submit" />
                 </form>
             </div>
-            <div class="card w-96 bg-base-100 shadow-xl justify-center items-center">
+            <div className="card w-96 bg-base-100 shadow-xl justify-center items-center">
             <h4 className='text-xl text-center font-bold text-primary my-4'>Profile</h4>
-                <figure><div class="avatar">
-                    <div class="w-48 rounded-full">
+                <figure><div className="avatar">
+                    <div className="w-48 rounded-full">
                         <img src={user.photoURL} />
                     </div>
                 </div></figure>
-                <div class="card-body">
-                    <h2 class="card-title">{user.displayName}</h2>
+                <div className="card-body">
+                    <h2 className="card-title">{user.displayName}</h2>
                     <p>{user.email}</p>
                 </div>
             </div>
