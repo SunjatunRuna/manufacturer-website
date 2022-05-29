@@ -20,12 +20,16 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-80 text-base-content">
                     {/* <!-- Sidebar content here --> */}
-                    <li><Link to='/dashboard'>My Order</Link></li>
-                    <li><Link to='/dashboard/review'>My Review</Link></li>
+                    {
+                        !admin && <>
+                            <li><Link to='/dashboard/order'>My Order</Link></li>
+                            <li><Link to='/dashboard/review'>My Review</Link></li>
+                        </>
+                    }
                     <ul className="menu menu-horizontal">
                         {/* <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused --> */}
                         <li tabindex="0">
-                            <Link to='/dashboard/profile'>My Profile</Link>
+                            <Link to='/dashboard'>My Profile</Link>
                             <ul className="">
                                 {
                                     admin && <>
