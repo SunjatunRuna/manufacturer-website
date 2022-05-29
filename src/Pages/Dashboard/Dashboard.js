@@ -12,7 +12,7 @@ const Dashboard = () => {
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content">
                 <h3 className='text-3xl text-primary font-bold'>Welcome to your dashboard</h3>
-            <Outlet></Outlet>
+                <Outlet></Outlet>
                 <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
             </div>
@@ -22,10 +22,20 @@ const Dashboard = () => {
                     {/* <!-- Sidebar content here --> */}
                     <li><Link to='/dashboard'>My Order</Link></li>
                     <li><Link to='/dashboard/review'>My Review</Link></li>
-                    <li><Link to='/dashboard/profile'>Profile</Link></li>
                     {
-                        admin && <li><Link to='/dashboard/users'>All User</Link></li>
+                        admin &&  <li><Link to='/dashboard/users'>All User</Link></li>
                     }
+                    <ul class="menu menu-horizontal bg-base-100">
+                        {/* <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused --> */}
+                        <li tabindex="0">
+                            <Link to='/dashboard/profile'>My Profile</Link>
+                            <ul class="bg-base-100">
+                                <li><Link to='/dashboard/product'>Add Product</Link></li>
+                                <li><Link to='/dashboard/manage'>Manage Product</Link></li>
+                                <li><a>Submenu 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </ul>
 
             </div>

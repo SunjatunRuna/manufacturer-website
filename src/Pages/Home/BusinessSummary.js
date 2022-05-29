@@ -2,7 +2,7 @@ import React from 'react';
 
 const BusinessSummary = () => {
     return (
-        <div>
+        <div className='bg-yellow-400 py-12'>
             <h3 className='text-3xl text-center font-bold mb-24'><span className='text-primary'>Business</span> Summary</h3>
             <div class="stats shadow flex justify-center mx-24 mb-32">
                 <div class="stat">
@@ -32,13 +32,10 @@ const BusinessSummary = () => {
                         </div>
                     </div>
                     <div class="stat-value">86%</div>
-                    <div class="stat-title">Tasks done</div>
-                    <div class="stat-desc text-secondary">31 tasks remaining</div>
+                    <div class="stat-title">Delivery done</div>
+                    <div class="stat-desc text-secondary">31 Delivery remaining</div>
                 </div>
 
-            </div>
-            <div className='mx-24 shadow-2xl'>
-                <h4>Do You Have Any Question About Us?</h4>
             </div>
         </div>
     );

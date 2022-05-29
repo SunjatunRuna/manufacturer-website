@@ -16,6 +16,8 @@ import Error from './Pages/Error/Error';
 import Profile from './Pages/Dashboard/Profile';
 import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/RequireAuth/RequireAdmin';
+import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageOrder from './Pages/Dashboard/ManageOrder';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path='review' element={<Review></Review>}></Route>
           <Route path='profile' element={<Profile></Profile>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path='product' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='manage' element={<RequireAdmin><ManageOrder></ManageOrder></RequireAdmin>}></Route>
         </Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
