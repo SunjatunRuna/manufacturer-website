@@ -1,17 +1,37 @@
 import React from 'react';
-import img from '../../images/free-delivery-icon-flat-style-vector-2079224.jpg';
-import imgTwo from '../../images/payment2.jpg'
 
 const Info = () => {
     return (
-        <div className='my-24'>
-            <h3 className='text-2xl uppercase text-center font-bold'>Our Service</h3>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mx-32 px-32'>
-                <div className='w-96'>
-                <img src={img} alt="" />
-                </div>
-                <div className='w-96 mt-12'>
-                    <img src={imgTwo} alt="" />
+        <div class="hero h-96" style={{ backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROsdnV42Melv_yu6jF3lielVG5FgNKlkGDug&usqp=CAU)" }}>
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-xl">
+                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-24'>
+                        <div>
+                            <div class="avatar placeholder">
+                                <div class="outline outline-secondary text-secondary rounded-full rounded-full w-24">
+                                    <span class="text-5xl"><i class="fa-solid fa-truck-fast"></i></span>
+                                </div>
+                            </div>
+                            <h4 className='text-xl my-4 text-secondary'>Free Shipping</h4>
+                        </div>
+                        <div>
+                            <div class="avatar placeholder">
+                                <div class="outline outline-secondary text-secondary rounded-full rounded-full w-24">
+                                    <span class="text-5xl"><i class="fa-solid fa-plane"></i></span>
+                                </div>
+                            </div>
+                            <h4 className='text-xl my-4 text-secondary'>Fast Delivery</h4>
+                        </div>
+                        <div>
+                            <div class="avatar placeholder">
+                                <div class="outline outline-secondary text-secondary rounded-full w-24">
+                                    <span class="text-5xl"><i class="fa-solid fa-thumbs-up"></i></span>
+                                </div>
+                            </div>
+                            <h4 className='text-xl my-4 text-secondary'>Big Choice</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

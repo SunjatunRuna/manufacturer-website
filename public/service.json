@@ -1,50 +1,50 @@
 [
     {
-        "name": "Motherboard",
+        "name": "Pen Drive",
         "description":"High quality, cheap price",
         "quantity": "600",
-        "minimum": "100",
-        "price": "",
-        "img": "https://www.tutorialspoint.com/computer_fundamentals/images/mother_board.jpg"
+        "minimum": "10",
+        "price": "5",
+        "img": "https://5.imimg.com/data5/SK/VM/MY-57481577/pen-drive-500x500.jpg"
     },
     {
-        "name": "RAM",
+        "name": "Modem",
         "description":"High quality, cheap price",
-        "quantity": "850",
-        "minimum": "100",
-        "price": "3500",
-        "img": "https://i.ebayimg.com/images/g/EyEAAOSwT6pV0f8E/s-l640.jpg"
+        "quantity": "550",
+        "minimum": "10",
+        "price": "10",
+        "img": "https://cdn.shopify.com/s/files/1/0255/1450/8335/products/4G-WIFI-MODEM-3_2048x2048.jpg"
     },
     {
-        "name": "Cooling Fan",
+        "name": "Webcam",
         "description":"High quality, cheap price",
         "quantity": "400",
-        "minimum": "100",
-        "price": "2000",
-        "img": "https://thermaltake.azureedge.net/pub/media/catalog/product/cache/6bf0ed99c663954fafc930039201ed07/t/o/tough14_01.jpg"
+        "minimum": "5",
+        "price": "15",
+        "img": "https://3rd-strike.com/wp-content/uploads/2020/10/Sandberg-Streamer-USB-Webcam-Pro-2.jpg"
     },
     {
-        "name": "ROM",
+        "name": "Speaker",
         "description":"High quality, cheap price",
-        "quantity": "1000",
-        "minimum": "250",
-        "price": "3000",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaJJu7KHF98_aRcbdV5Vo0XpYsQSXRpaziUz-FSZx2ws2Ia1-3eDyToQuaW6_1SrPf4P4&usqp=CAU"
+        "quantity": "600",
+        "minimum": "8",
+        "price": "10",
+        "img": "https://i.pcmag.com/imagery/reviews/00EU3U5rRoe9swRlkJE2yDa-1.fit_lim.size_625x365.v1601052236.jpg"
     },
     {
-        "name": "Sound Card",
+        "name": "Card Reader",
         "description":"High quality, cheap price",
         "quantity": "950",
-        "minimum": "200",
-        "price": "2500",
-        "img": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2013/09/soundcardfeature.jpg?q=50&fit=contain&w=1500&h=750&dpr=1.5"
+        "minimum": "15",
+        "price": "5",
+        "img": "https://media.startech.com/cms/products/main/hb31c3asdmb.main.jpg"
     },
     {
-        "name": "Graphics Card",
+        "name": "CD Drive",
         "description":"High quality, cheap price",
-        "quantity": "1000",
-        "minimum": "200",
-        "price": "5000",
-        "img": "https://s.yimg.com/ny/api/res/1.2/oNPDsz3LLRTT4VF0zs18JQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD05MDA-/https://s.yimg.com/uu/api/res/1.2/rkoz.vvPJ9Hz8FJeYwyuKQ--~B/aD05NjA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bgr_208/e613b3d6627e75a67cd53f890df19e5d"
+        "quantity": "300",
+        "minimum": "8",
+        "price": "12",
+        "img": "https://m.media-amazon.com/images/I/61Iv-HkR4xL._AC_SY450_.jpg"
     }
 ]
