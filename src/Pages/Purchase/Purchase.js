@@ -20,7 +20,7 @@ const Purchase = () => {
         const phone = event.target.phone.value;
         const quantity = event.target.quantity.value;
         const oldPrice = parseInt(data.price);
-        const price = oldPrice * parseInt(quantity); 
+        const price = oldPrice * parseInt(quantity);
         console.log(phone);
         const order = {
             orderId: data._id,
@@ -62,30 +62,27 @@ const Purchase = () => {
     //     setQuantity(e.target.quantity.value);
     // }
     return (
-        <div className='grid grid-col-1 lg:grid-cols-2 px-32 my-12'>
-            <div className="card mx-32">
-                <figure><img src={data.img} alt="Shoes" className='w-56' /></figure>
-                <div className="card-body">
+        <div className='px-32 grid grid-cols-2 justify-items-center my-12'>
+            <div class="card max-w-xl h-96 lg:card-side mt-10 outline outline-gray-100 outline-1">
+                <figure><img src={data.img} alt="Album" className='w-56 h-56' /></figure>
+                <div className="card-body mt-16">
                     <h2 className="card-title">{data.name}</h2>
-                    <p>Description: {data.description}</p>
-                    <p>Quantity: {data.quantity}</p>
-                    <p>Price: {data.price}</p>
-                    <p>Minimum Quantity: {data.minimum}</p>
+                    <ul>
+                        <li>Description: {data.description}</li>
+                        <li>Quantity: {data.quantity}</li>
+                        <li>Price: {data.price}</li>
+                        <li>Minimum Quantity: {data.minimum}</li>
+                    </ul>
                 </div>
             </div>
-            <div className='mr-32'>
-                <div className="avatar">
-                    <div className="w-16 rounded-full">
-                        <img src={user.photoURL} />
-                    </div>
-                </div>
-                <form onSubmit={handleOrder} className='py-4 grid grid-cols-1 gap-4 justify-items-center'>
-                    <input type="text" name='name' disabled value={user.displayName} className="input input-bordered max-w-xs" />
-                    <input type="email" name='email' disabled value={user.email} className="input input-bordered max-w-xs" />
-                    <input type="number" name='quantity' placeholder='Quantity' className="input input-bordered max-w-xs" />
-                    <input type="text" name='address' placeholder="Address" className="input input-bordered max-w-xs" />
-                    <input type="number" name='phone' placeholder="Cell Phone" className="input input-bordered max-w-xs" />
-                    <input type="submit" value='Place Order' className="btn btn-primary text-white max-w-xs" />
+            <div className='my-2'>
+                <form onSubmit={handleOrder} className='py-4 max-w-xl grid grid-cols-1 gap-4 justify-items-center'>
+                    <input type="text" name='name' disabled value={user.displayName} className="input input-bordered w-96" />
+                    <input type="email" name='email' disabled value={user.email} className="input input-bordered w-96" />
+                    <input type="number" name='quantity' placeholder='Quantity' className="input input-bordered w-96" />
+                    <input type="text" name='address' placeholder="Address" className="input input-bordered w-96" />
+                    <input type="number" name='phone' placeholder="Cell Phone" className="input input-bordered w-96" />
+                    <input type="submit" value='Place Order' className="btn btn-primary text-white w-96" />
                 </form>
             </div>
         </div>

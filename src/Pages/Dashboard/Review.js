@@ -36,7 +36,7 @@ const Review = () => {
             <h4 className='text-xl text-center font-bold'>Add Review:</h4>
             <form className='flex flex-col max-w-lg ml-12' onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="img" className='text-start'>Photo URL: </label>
-                <input className='border border-mute my-2 ps-2' name='img' disabled={user.photoURL} value={user.photoURL} type="text" {...register("img")} />
+                <input className='border border-mute my-2 ps-2' name='img' type="text" {...register("img")} />
                 <label htmlFor="name" className='text-start'>Name: </label>
                 <input className='border border-mute my-2 ps-2' name='name' disabled value={user.displayName} type="text" {...register("name")} />
                 <label htmlFor="description" className='text-start'>Description: </label>
